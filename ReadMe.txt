@@ -1,0 +1,1 @@
+Projekt służący do zarządzania lotniskiem, samolotami, lotami itd.
