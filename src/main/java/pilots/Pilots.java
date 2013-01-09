@@ -1,6 +1,6 @@
 package pilots;
 
-public class Pilots implements PilotsInterface {
+public class Pilots {
 
 	private String name;
 	private int experience;

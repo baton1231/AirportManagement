@@ -2,7 +2,7 @@ package flight;
 
 import java.util.Date;
 
-public class Flight implements FlightInterface {
+public class Flight {
 
 	private String destination;
 	private Date departureTime;

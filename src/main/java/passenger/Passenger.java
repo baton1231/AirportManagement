@@ -1,6 +1,6 @@
 package passenger;
 
-public class Passenger implements PassengerInterface {
+public class Passenger {
 
 	private String name;
 	private String destination;

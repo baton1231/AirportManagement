@@ -4,7 +4,7 @@ import java.util.List;
 
 import pilots.Pilots;
 
-public class AirplaneManagerInterface implements ManagerInterface<Pilots> {
+public class AirplaneManager implements ManagerInterface<Pilots> {
 
 	public Pilots get(int id) {
 		// TODO Auto-generated method stub

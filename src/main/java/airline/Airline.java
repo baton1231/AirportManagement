@@ -5,7 +5,7 @@ import java.util.List;
 import airplane.Airplane;
 
 
-public class Airline implements AirlineInterface {
+public class Airline {
 
 	private String name;
 	private String country;

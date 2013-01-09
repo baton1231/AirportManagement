@@ -4,7 +4,7 @@ import java.util.List;
 
 import pilots.Pilots;
 
-public class Airplane implements AirplaneInterface {
+public class Airplane {
 
 	private int passengerCapacity;
 	private int economyCapacity;

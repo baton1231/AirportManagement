@@ -2,28 +2,34 @@ package management;
 
 import java.util.List;
 
-import flight.Flight;
+import airline.Airline;
 
-public class FlightManagerInterface implements ManagerInterface<Flight> {
 
-	public Flight get(int id) {
+
+public class AirlineManager implements ManagerInterface<Airline> {
+
+	public Airline get(int id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	public List<Flight> getAll() {
+	public List<Airline> getAll() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	public boolean save(Flight obj) {
+	public boolean save(Airline obj) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
-	public boolean delete(Flight obj) {
+	public boolean delete(Airline obj) {
 		// TODO Auto-generated method stub
 		return false;
 	}
+
+
+	
+
 
 }
