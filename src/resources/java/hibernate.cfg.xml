@@ -27,7 +27,7 @@
     
    <mapping class="airportManagement.airline.Airline"/>
    <mapping class="airportManagement.airplane.PassengerAirplane"/>
-  
+  <mapping class="airportManagement.pilots.Pilots"/>
     
     </session-factory>
 </hibernate-configuration>

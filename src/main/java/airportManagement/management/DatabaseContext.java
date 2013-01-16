@@ -20,7 +20,7 @@ import airportManagement.airplane.Airplane;
 		public static List<Airline> getAirline() {
 			return airlines;
 		}
-		public static List<Airplane> getCars() {
+		public static List<Airplane> getAirplane() {
 			return airplanes;
 		}
 		

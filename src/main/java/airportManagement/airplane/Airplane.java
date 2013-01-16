@@ -26,16 +26,24 @@ public abstract class Airplane {
 	@ManyToOne
 	protected Airline owner;
 	
-	//@OneToMany(mappedBy = "pilot", cascade = CascadeType.PERSIST)
-	//private List<Pilots> pilots;
-
-	@Transient//
+	@OneToMany(mappedBy = "planes", cascade = CascadeType.PERSIST)
+	protected List<Pilots> pilots = new ArrayList<Pilots>();
+	
+	@Transient
 	Context context;
 
 	public Airplane() {
 		context = Context.getInstance();
 		context.raiseNumberOfAirplanes();
-		//this.pilots = new ArrayList<Pilots>();
+		
+	}
+
+	public List<Pilots> getPilots() {
+		return pilots;
+	}
+
+	public void setPilots(List<Pilots> pilots) {
+		this.pilots = pilots;
 	}
 
 	public void printData() {
@@ -51,6 +59,7 @@ public abstract class Airplane {
 		this.owner = owner;
 	}
 
+	
 	public int getId() {
 		return id;
 	}

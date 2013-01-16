@@ -21,7 +21,7 @@ import airportManagement.airplane.Airplane;
 import airportManagement.management.Context;
 
 @Entity
-@Table(name = "Linie_lotnicze")
+@Table(name = "Airline")
 @NamedQueries({
 		@NamedQuery(name = "Airline.all", query = "from Airline a"),
 		@NamedQuery(name = "Airline.id", query = "from Airline a where id= :id"),
