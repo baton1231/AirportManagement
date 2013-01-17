@@ -1,50 +1,62 @@
 package airportManagement.passenger;
 
-public class Passenger {
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+import javax.persistence.Transient;
 
-	private String name;
-	private String destination;
-	private String flightType;
-	private int phoneNumber;
+import airportManagement.flight.Flight;
+import airportManagement.management.Context;
 
-	public String getName() {
+@Entity
+// @Table(name = "Passenger")
+public abstract class Passenger {
 
-		return name;
-	}
+	@Id
+	@GeneratedValue
+	private int id;
 
-	public void setName(String name) {
-		this.name = name;
+	@ManyToOne
+	protected Flight flightNo;
 
-	}
+	@Transient
+	Context context;
 
-	public String getDestination() {
-
-		return destination;
-	}
-
-	public void setDestination(String destination) {
-		this.destination = destination;
-
-	}
-
-	public int getPhoneNumber() {
-
-		return phoneNumber;
-	}
-
-	public void setPhonenumber(int phoneNumber) {
-		this.phoneNumber = phoneNumber;
+	public Passenger() {
+		context = Context.getInstance();
+		context.raisenumberOfFlights();
 
 	}
 
-	public String getFlightType() {
+//	public Flight getPassenger() {
+//		return passengers;
+//	}
+//
+//	public void setPassenger(Flight passengers) {
+//		this.passengers = passengers;
+//	}
 
-		return flightType;
+	public void printData() {
+		System.out.println("Lot: " + flightNo.getFlightNo());
+		System.out.println(getFlightDetails());
 	}
 
-	public void setFlightType(String flightType) {
-		this.flightType = flightType;
+	public abstract String getFlightDetails();
 
+	public void setFlight(Flight flightNo) {
+		this.flightNo = flightNo;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 }

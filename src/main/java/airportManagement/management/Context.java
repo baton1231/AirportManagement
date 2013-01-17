@@ -6,6 +6,8 @@ public final class Context {
 
 	private int quantityOfAirplanes;
 	private int quantityOfAirline;
+	private int quantityOfFlights;
+	private int quantityOfPassenger;
 	
 	private Context() {
 	}
@@ -36,11 +38,18 @@ public final class Context {
 		this.quantityOfAirplanes++;
 	}
 
+	public void reduceFlights()
+	{
+		this.quantityOfFlights--;
+	}
 	public void raisenumberOfAirlines()
 	{
 		this.quantityOfAirline++;
 	}
-	
+	public void raisenumberOfFlights()
+	{
+		this.quantityOfFlights++;
+	}
 	public int getQuantityOfAirlines()
 	{
 		return this.quantityOfAirline;
@@ -48,5 +57,13 @@ public final class Context {
 	public int getQuantity()
 	{
 		return this.quantityOfAirplanes;
+	}
+	public int getQuantityOfFlights()
+	{
+		return this.quantityOfFlights;
+	}
+	public void raiseNumberOfPassenger()
+	{
+		this.quantityOfPassenger++;
 	}
 }
