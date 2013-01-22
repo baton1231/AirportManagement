@@ -15,8 +15,6 @@ import javax.persistence.Transient;
 import org.hibernate.annotations.NamedQueries;
 import org.hibernate.annotations.NamedQuery;
 
-
-
 import airportManagement.airplane.Airplane;
 import airportManagement.management.Context;
 
@@ -26,8 +24,6 @@ import airportManagement.management.Context;
 		@NamedQuery(name = "Airline.all", query = "from Airline a"),
 		@NamedQuery(name = "Airline.id", query = "from Airline a where id= :id"),
 		@NamedQuery(name = "Airline.delete", query = "Delete from Airline a where id=:id") })
-
-
 public class Airline {
 
 	@Id

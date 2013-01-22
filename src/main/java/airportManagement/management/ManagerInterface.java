@@ -10,8 +10,5 @@ public interface ManagerInterface<TEntity> {
 	public boolean save(TEntity obj);
 	public boolean delete(TEntity obj);
 	
-	/**
-	 * inne metody
-	 */
 
 }

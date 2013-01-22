@@ -1,10 +1,6 @@
 package airportManagement.airplane;
 
-import java.util.ArrayList;
-
 import javax.persistence.Entity;
-
-import airportManagement.pilots.Pilots;
 
 
 @Entity

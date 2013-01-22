@@ -22,8 +22,7 @@ public class HibernateAirlineManager implements ManagerInterface<Airline> {
 		if (result.size() == 0)
 			return null;
 
-		Airline returnValue = new Airline(result.get(0).getName(), result
-				.get(0).getCountry());
+		Airline returnValue = new Airline(result.get(0).getName(), result.get(0).getCountry());
 		returnValue.setId(result.get(0).getId());
 		return returnValue;
 	}
@@ -49,7 +48,7 @@ public class HibernateAirlineManager implements ManagerInterface<Airline> {
 	public boolean delete(Airline obj) {
 		try {
 			session.beginTransaction();
-			session.getNamedQuery("Person.delete")
+			session.getNamedQuery("Airline.delete")
 					.setInteger("id", obj.getId()).executeUpdate();
 
 			session.getTransaction().commit();

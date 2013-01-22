@@ -61,8 +61,13 @@
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
 			<version>1.2.16</version>
-			<type>bundle</type>
+			
 		</dependency>
+		
+		
+		 
+		
+		
 	</dependencies>
 
 
@@ -80,4 +85,7 @@
 		</plugins>
 	</build>
 
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
 </project>

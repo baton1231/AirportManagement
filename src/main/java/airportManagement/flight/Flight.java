@@ -9,22 +9,17 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.ManyToMany;
-import javax.persistence.ManyToOne;
+
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 
-
 import org.hibernate.annotations.NamedQueries;
 import org.hibernate.annotations.NamedQuery;
 
-import airportManagement.airline.Airline;
 import airportManagement.airplane.Airplane;
 import airportManagement.management.Context;
 import airportManagement.passenger.Passenger;
-import airportManagement.pilots.Pilots;
-
 
 @Entity
 @Table(name = "Flight")
@@ -34,6 +29,9 @@ import airportManagement.pilots.Pilots;
 		@NamedQuery(name = "Flight.delete", query = "Delete from Flight f where id=:id") })
 public class Flight {
 
+	
+	
+	
 	@Id
 	@GeneratedValue
 	private int id;
@@ -46,8 +44,7 @@ public class Flight {
 
 	@OneToMany(mappedBy = "flight", cascade = CascadeType.PERSIST)
 	protected List<Airplane> airplane = new ArrayList<Airplane>();
-	
-	
+
 	public List<Airplane> getAirplane() {
 		return airplane;
 	}
@@ -77,8 +74,6 @@ public class Flight {
 		this.passengers = new ArrayList<Passenger>();
 		this.airplane = new ArrayList<Airplane>();
 	}
-	
-	
 
 	public int getId() {
 		return id;

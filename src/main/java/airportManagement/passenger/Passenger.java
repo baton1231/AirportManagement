@@ -3,17 +3,15 @@ package airportManagement.passenger;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.ManyToMany;
+
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
+
 import javax.persistence.Transient;
 
 import airportManagement.flight.Flight;
 import airportManagement.management.Context;
 
 @Entity
-// @Table(name = "Passenger")
 public abstract class Passenger {
 
 	@Id
@@ -32,13 +30,6 @@ public abstract class Passenger {
 
 	}
 
-//	public Flight getPassenger() {
-//		return passengers;
-//	}
-//
-//	public void setPassenger(Flight passengers) {
-//		this.passengers = passengers;
-//	}
 
 	public void printData() {
 		System.out.println("Lot: " + flightNo.getFlightNo());
